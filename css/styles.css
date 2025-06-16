@@ -1,0 +1,121 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Header styles */
+header {
+  background-color: #ffd700;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 50px;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #006400;
+  font-weight: 600;
+}
+
+/* Menu toggle button for mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #006400;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Content styles */
+.content {
+  padding: 2rem;
+  min-height: 70vh;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ffd700;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
