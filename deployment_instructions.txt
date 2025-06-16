@@ -1,0 +1,48 @@
+## GoDaddy Website Deployment Instructions
+
+### 1. Log into GoDaddy Account
+- Go to https://www.godaddy.com/
+- Click "Sign In" and enter your credentials
+
+### 2. Access cPanel or Hosting Dashboard
+- Go to "My Products" or "Web Hosting"
+- Find your domain and click "Manage" or "cPanel"
+
+### 3. Using File Manager to Upload Files
+a. In cPanel, click on "File Manager"
+b. Navigate to the public_html folder (this is your website's root directory)
+c. If there are any default files you don't need (like index.html), select them and click "Delete"
+d. Click "Upload" at the top
+e. Use the upload interface to upload all your website files:
+   - Upload all HTML files (.html)
+   - Create folders for "css", "images", and "Templates" and upload the respective files
+
+### 4. Alternative Method: Using FTP
+If you prefer using FTP (which is better for uploading many files at once):
+
+a. In cPanel, find "FTP Accounts" and note your FTP credentials
+b. Download an FTP client like FileZilla (https://filezilla-project.org/)
+c. Use these connection details:
+   - Host: Your domain or FTP host from cPanel
+   - Username: Your FTP username 
+   - Password: Your FTP password
+   - Port: 21 (default)
+d. Connect and upload all files from your local site to the public_html folder
+
+### 5. Verify Your Website
+- Once uploaded, visit your domain in a web browser
+- Check all pages and links to make sure everything works
+
+### 6. Troubleshooting Common Issues
+- If you see a 404 error, make sure your main page is named "index.html"
+- If images don't load, check their file paths in the HTML
+- If you see permission errors, you may need to set file permissions (typically 644 for files and 755 for folders)
+
+### 7. Setting Up Email (Optional)
+- In cPanel, you can also set up email accounts for your domain
+- Look for "Email Accounts" and follow the instructions to create addresses
+
+### 8. Setting Up HTTPS/SSL (Recommended)
+- In cPanel, look for "SSL/TLS" or "Security"
+- Most GoDaddy plans include free SSL certificates
+- Follow the instructions to install an SSL certificate for your domain
