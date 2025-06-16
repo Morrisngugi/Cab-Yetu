@@ -2,8 +2,9 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
+  background: linear-gradient(135deg, #ffe94d 0%, #fff 60%, #1ca14e 100%);
   color: #222;
+  min-height: 100vh;
 }
 
 /* Header styles */
@@ -75,6 +76,66 @@ nav a {
   min-height: 70vh;
 }
 
+/* Home actions styles */
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fffbe6;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(28,161,78,0.10);
+  padding: 2rem 1.5rem;
+  min-width: 180px;
+  min-height: 180px;
+  text-decoration: none;
+  color: #1ca14e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  border: 2px solid #ffe94d;
+}
+
+.action-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.action-card.download {
+  border-color: #ffd700;
+}
+
+.action-card.book {
+  border-color: #1ca14e;
+}
+
+.action-card.corporate {
+  border-color: #009245;
+}
+
+.action-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(28,161,78,0.18);
+  background: #fffde7;
+}
+
 /* Footer styles */
 .footer {
   background-color: #222;
@@ -83,7 +144,34 @@ nav a {
   padding: 1rem;
 }
 
+.social-links {
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: #ffd700;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
 /* Responsive layout */
+@media (max-width: 900px) {
+  .actions {
+    gap: 1rem;
+  }
+  .action-card {
+    min-width: 140px;
+    min-height: 140px;
+    padding: 1.2rem 0.7rem;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: row;
@@ -117,5 +205,18 @@ nav a {
 
   .content {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .action-card {
+    width: 100%;
+    min-width: unset;
+    min-height: 100px;
+    padding: 1rem 0.5rem;
   }
 }
