@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/cabyetu-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- InstanceBeginEditable name="doctitle" -->Driver Registration | Cabyetu<!-- InstanceEndEditable --></title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header (Standard Template Section) -->
+  <header>
+    <a href="index.html"><img src="images/yetu_cab_logo.png" alt="Cabyetu Logo" /></a>
+    
+    <div class="header-controls">
+      <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Page-Specific Content Editable Region -->
+  <div class="content">
+    <!-- InstanceBeginEditable name="mainContent" -->
+    <div class="driver-registration fade-in">
+      <h1>Join Our Driver Team</h1>
+      <p class="registration-intro">Ready to earn on your own terms? Join YETU's team of professional drivers and enjoy better commissions, flexible hours, and respect for your work.</p>
+      
+      <div class="form-container">
+        <div class="form-benefits">
+          <h3>Why Drive with YETU?</h3>
+          <ul class="feature-list">
+            <li>Higher earnings with lower commissions</li>
+            <li>Get paid daily or weekly - your choice</li>
+            <li>Flexible working hours</li>
+            <li>Dedicated driver support team</li>
+            <li>Safety features and secure payments</li>
+            <li>Regular bonuses and incentives</li>
+            <li>Driver community and trainings</li>
+          </ul>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Since joining YETU last year, my earnings have increased by 30%. The team genuinely cares about us drivers, and the app is really easy to use."</p>
+            </div>
+            <div class="testimonial-author">
+              <strong>James Maina</strong>
+              <span>YETU Driver since 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="registration-form">
+          <h3>Driver Application Form</h3>
+          <form id="driverRegistrationForm">
+            <div class="form-group">
+              <label for="fullName">Full Name*</label>
+              <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="idNumber">National ID/Passport Number*</label>
+              <input type="text" id="idNumber" name="idNumber" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number*</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address*</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="city">City/Town*</label>
+              <select id="city" name="city" required>
+                <option value="" selected disabled>Select your city</option>
+                <option value="nairobi">Nairobi</option>
+                <option value="mombasa">Mombasa</option>
+                <option value="kisumu">Kisumu</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="eldoret">Eldoret</option>
+                <option value="thika">Thika</option>
+                <option value="malindi">Malindi</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="otherCity" id="otherCityLabel" style="display: none;">Specify City/Town*</label>
+              <input type="text" id="otherCity" name="otherCity" style="display: none;">
+            </div>
+            
+            <div class="form-group">
+              <label for="experience">Driving Experience (Years)*</label>
+              <select id="experience" name="experience" required>
+                <option value="" selected disabled>Select experience</option>
+                <option value="0-1">Less than 1 year</option>
+                <option value="1-3">1-3 years</option>
+                <option value="3-5">3-5 years</option>
+                <option value="5+">More than 5 years</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Vehicle Information</label>
+              <div class="radio-group">
+                <label><input type="radio" name="vehicleOwnership" value="own" required> I own a vehicle</label>
+                <label><input type="radio" name="vehicleOwnership" value="rent"> I rent a vehicle</label>
+                <label><input type="radio" name="vehicleOwnership" value="need"> I need vehicle financing options</label>
+              </div>
+            </div>
+            
+            <div class="form-group vehicle-details" id="vehicleDetails">
+              <label for="vehicleMake">Vehicle Make*</label>
+              <input type="text" id="vehicleMake" name="vehicleMake">
+              
+              <label for="vehicleModel">Vehicle Model*</label>
+              <input type="text" id="vehicleModel" name="vehicleModel">
+              
+              <label for="vehicleYear">Year of Manufacture*</label>
+              <input type="number" id="vehicleYear" name="vehicleYear" min="2000" max="2025">
+              
+              <label for="licensePlate">License Plate Number*</label>
+              <input type="text" id="licensePlate" name="licensePlate">
+            </div>
+            
+            <div class="form-group">
+              <label>Required Documents (Will be uploaded during verification)</label>
+              <ul class="document-list">
+                <li>Driver's License</li>
+                <li>National ID/Passport</li>
+                <li>Vehicle Registration</li>
+                <li>Insurance Certificate</li>
+                <li>PSV License (if applicable)</li>
+                <li>Passport-size Photo</li>
+              </ul>
+            </div>
+            
+            <div class="form-group">
+              <label for="referralCode">Referral Code (if any)</label>
+              <input type="text" id="referralCode" name="referralCode" placeholder="Enter driver referral code">
+            </div>
+            
+            <div class="form-group">
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="background" required>
+                  I consent to a background check*
+                </label>
+              </div>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="terms" required>
+                  I agree to the <a href="#terms" class="terms-link">Terms and Conditions</a>*
+                </label>
+              </div>
+            </div>
+            
+            <div id="formMessage" class="form-message"></div>
+            
+            <button type="submit" class="btn">Submit Application</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="registration-next-steps">
+        <h3>Application Process</h3>
+        <ol class="steps-list">
+          <li>Submit your application online</li>
+          <li>Receive a confirmation email with next steps</li>
+          <li>Complete document verification (in-person or online)</li>
+          <li>Attend a brief orientation session</li>
+          <li>Download the driver app and start earning!</li>
+        </ol>
+      </div>
+      
+      <div class="faq-section">
+        <h3>Frequently Asked Questions</h3>
+        
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              What are YETU's commission rates?
+              <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <p>YETU offers one of the lowest commission rates in the industry, starting from just 15%. This means you keep more of what you earn compared to other platforms.</p>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              How soon can I start driving after applying?
+              <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <p>Once your documents are verified and you've completed the orientation, you can typically start driving within 24-48 hours. Our team works quickly to get you on the road and earning.</p>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Can I drive part-time with YETU?
+              <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <p>Absolutely! You can drive as much or as little as you want. YETU offers complete flexibility - work the hours that suit your schedule.</p>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Does YETU offer vehicle financing?
+              <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes, through our partnerships with various financial institutions, we can help you access vehicle financing at competitive rates. Select the "I need vehicle financing options" when applying.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-container text-center">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join the hundreds of drivers already enjoying better earnings with YETU!</p>
+        <a href="#driver-app" class="btn"><i class="fas fa-download"></i> Download Driver App</a>
+      </div>
+    </div>
+    <!-- InstanceEndEditable -->
+  </div>
+
+  <!-- Footer (Standard Template Section) -->
+  <footer class="footer">
+    <p>&copy; 2025 Cabyetu. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://tiktok.com/" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+    
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const icon = darkModeToggle.querySelector('i');
+    
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode-enabled');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+    
+    // Toggle dark mode
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode-enabled');
+      
+      if (document.body.classList.contains('dark-mode-enabled')) {
+        localStorage.setItem('darkMode', 'enabled');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        localStorage.setItem('darkMode', null);
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+    
+    // Show/hide "Other City" field
+    document.getElementById('city').addEventListener('change', function() {
+      const otherCity = document.getElementById('otherCity');
+      const otherCityLabel = document.getElementById('otherCityLabel');
+      
+      if (this.value === 'other') {
+        otherCity.style.display = 'block';
+        otherCityLabel.style.display = 'block';
+        otherCity.required = true;
+      } else {
+        otherCity.style.display = 'none';
+        otherCityLabel.style.display = 'none';
+        otherCity.required = false;
+      }
+    });
+    
+    // Show/hide vehicle details based on ownership
+    const vehicleRadios = document.querySelectorAll('input[name="vehicleOwnership"]');
+    const vehicleDetails = document.getElementById('vehicleDetails');
+    
+    vehicleRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.value === 'own' || this.value === 'rent') {
+          vehicleDetails.style.display = 'block';
+          document.getElementById('vehicleMake').required = true;
+          document.getElementById('vehicleModel').required = true;
+          document.getElementById('vehicleYear').required = true;
+          document.getElementById('licensePlate').required = true;
+        } else {
+          vehicleDetails.style.display = 'none';
+          document.getElementById('vehicleMake').required = false;
+          document.getElementById('vehicleModel').required = false;
+          document.getElementById('vehicleYear').required = false;
+          document.getElementById('licensePlate').required = false;
+        }
+      });
+    });
+    
+    // Accordion functionality
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', function() {
+        this.classList.toggle('active');
+        
+        const icon = this.querySelector('.accordion-icon i');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+        
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+    
+    // Form submission handler - placeholder for future database integration
+    document.getElementById('driverRegistrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formMessage = document.getElementById('formMessage');
+      formMessage.textContent = "Application submitted successfully! We'll contact you shortly with next steps.";
+      formMessage.className = 'form-message success';
+      
+      // Clear the form
+      e.target.reset();
+      
+      // Hide any conditionally shown fields
+      document.getElementById('otherCity').style.display = 'none';
+      document.getElementById('otherCityLabel').style.display = 'none';
+      document.getElementById('vehicleDetails').style.display = 'none';
+      
+      // In a real implementation, you would send this data to a server or database
+      console.log("Driver application submitted - database integration pending");
+      
+      // Scroll to the message
+      formMessage.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+<!-- InstanceEnd --></html>

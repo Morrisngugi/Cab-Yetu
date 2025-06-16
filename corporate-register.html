@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/cabyetu-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- InstanceBeginEditable name="doctitle" -->Corporate Registration | Cabyetu<!-- InstanceEndEditable --></title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header (Standard Template Section) -->
+  <header>
+    <a href="index.html"><img src="images/yetu_cab_logo.png" alt="Cabyetu Logo" /></a>
+    
+    <div class="header-controls">
+      <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Page-Specific Content Editable Region -->
+  <div class="content">
+    <!-- InstanceBeginEditable name="mainContent" -->
+    <div class="corporate-registration fade-in">
+      <h1>Corporate Account Registration</h1>
+      <p class="registration-intro">Join hundreds of businesses across Kenya that trust YETU for their transportation needs. Register your company below to get started with our corporate services.</p>
+      
+      <div class="form-container">
+        <div class="form-benefits">
+          <h3>Benefits of a Corporate Account</h3>
+          <ul class="feature-list">
+            <li>Centralized billing with monthly invoicing</li>
+            <li>Detailed trip reporting and analytics</li>
+            <li>Custom ride policies and spending controls</li>
+            <li>Dedicated account manager</li>
+            <li>Priority support 24/7</li>
+            <li>Employee ride allocation</li>
+            <li>Multiple payment options</li>
+          </ul>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"YETU's corporate account has streamlined our employee transportation completely. The reporting tools alone have saved us countless hours of administrative work."</p>
+            </div>
+            <div class="testimonial-author">
+              <strong>Sarah Mwangi</strong>
+              <span>Operations Director, Nairobi Tech Hub</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="registration-form">
+          <h3>Register Your Company</h3>
+          <form id="corporateRegistrationForm">
+            <div class="form-group">
+              <label for="companyName">Company Name*</label>
+              <input type="text" id="companyName" name="companyName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry">
+                <option value="" selected disabled>Select your industry</option>
+                <option value="technology">Technology</option>
+                <option value="finance">Finance & Banking</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="education">Education</option>
+                <option value="retail">Retail & Consumer Goods</option>
+                <option value="hospitality">Hospitality & Tourism</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="energy">Energy & Utilities</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="employeeCount">Number of Employees</label>
+              <select id="employeeCount" name="employeeCount">
+                <option value="" selected disabled>Select range</option>
+                <option value="1-10">1-10</option>
+                <option value="11-50">11-50</option>
+                <option value="51-200">51-200</option>
+                <option value="201-500">201-500</option>
+                <option value="501+">501+</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactName">Contact Person Name*</label>
+              <input type="text" id="contactName" name="contactName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactPosition">Position in Company*</label>
+              <input type="text" id="contactPosition" name="contactPosition" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactEmail">Business Email*</label>
+              <input type="email" id="contactEmail" name="contactEmail" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactPhone">Phone Number*</label>
+              <input type="tel" id="contactPhone" name="contactPhone" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="companyAddress">Company Address</label>
+              <textarea id="companyAddress" name="companyAddress" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="services">Services Interested In (select all that apply)</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="services" value="employee_transport"> Employee Transportation</label>
+                <label><input type="checkbox" name="services" value="executive_rides"> Executive Rides</label>
+                <label><input type="checkbox" name="services" value="airport_transfers"> Airport Transfers</label>
+                <label><input type="checkbox" name="services" value="event_logistics"> Event Transportation Logistics</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="estimatedMonthlyRides">Estimated Monthly Rides</label>
+              <select id="estimatedMonthlyRides" name="estimatedMonthlyRides">
+                <option value="" selected disabled>Select range</option>
+                <option value="1-20">1-20</option>
+                <option value="21-50">21-50</option>
+                <option value="51-100">51-100</option>
+                <option value="101-500">101-500</option>
+                <option value="501+">501+</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="additionalInfo">Additional Information or Requirements</label>
+              <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="terms" required>
+                  I agree to the <a href="#terms" class="terms-link">Terms and Conditions</a>*
+                </label>
+              </div>
+            </div>
+            
+            <div id="formMessage" class="form-message"></div>
+            
+            <button type="submit" class="btn">Submit Registration</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="registration-next-steps">
+        <h3>What Happens Next?</h3>
+        <ol class="steps-list">
+          <li>Our corporate team will review your application</li>
+          <li>A dedicated account manager will contact you within 24 hours</li>
+          <li>We'll schedule a consultation to understand your specific needs</li>
+          <li>Our team will create a customized corporate plan</li>
+          <li>Once approved, your account will be set up and ready to use</li>
+        </ol>
+      </div>
+    </div>
+    <!-- InstanceEndEditable -->
+  </div>
+
+  <!-- Footer (Standard Template Section) -->
+  <footer class="footer">
+    <p>&copy; 2025 Cabyetu. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://tiktok.com/" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+    
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const icon = darkModeToggle.querySelector('i');
+    
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode-enabled');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+    
+    // Toggle dark mode
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode-enabled');
+      
+      if (document.body.classList.contains('dark-mode-enabled')) {
+        localStorage.setItem('darkMode', 'enabled');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        localStorage.setItem('darkMode', null);
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+    
+    // Form submission handler - placeholder for future database integration
+    document.getElementById('corporateRegistrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formMessage = document.getElementById('formMessage');
+      formMessage.textContent = "Registration submitted successfully! Our team will contact you shortly.";
+      formMessage.className = 'form-message success';
+      
+      // Clear the form
+      e.target.reset();
+      
+      // In a real implementation, you would send this data to a server or database
+      console.log("Form submitted - database integration pending");
+    });
+  </script>
+</body>
+<!-- InstanceEnd --></html>
