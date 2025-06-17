@@ -268,11 +268,12 @@ p {
 .about-section h2 {
   font-style: italic;
   line-height: 1.4;
+  margin-bottom: 1rem; /* Reduced margin */
 }
 
 /* Mission, Vision, Values Container Layout */
 .mvv-container {
-  margin: 3rem 0;
+  margin: 2rem 0; /* Reduced top margin */
   width: 100%;
 }
 
@@ -1371,6 +1372,46 @@ p {
 .read-more-btn .fa-chevron-down {
   transition: transform 0.3s ease;
   font-size: 0.8rem;
+}
+
+/* Intro Card Specific Styling */
+.intro-card {
+  padding: 0.5rem 1rem; /* Reduced padding */
+  margin-bottom: 0.5rem; /* Small bottom margin */
+  height: auto; /* Override the height: 100% from general card style */
+  transform: none; /* Remove hover transform effect to save space */
+  min-height: auto; /* Ensure no minimum height is enforced */
+}
+
+.intro-card:hover {
+  transform: none; /* Override the hover effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Keep original shadow */
+}
+
+.intro-card p {
+  font-size: 0.9rem; /* Smaller font */
+  line-height: 1.3; /* Tighter line height */
+  margin: 0; /* Remove all margins */
+  padding: 0; /* Remove all padding */
+}
+
+/* Additional styles to ensure the intro card is as compact as possible */
+.intro-card.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+  border-radius: 6px; /* Smaller border radius */
+  margin-bottom: 0.5rem; /* Very small bottom margin */
+}
+
+/* Media query to ensure the intro card is even more compact on mobile */
+@media (max-width: 767px) {
+  .intro-card {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .intro-card p {
+    font-size: 0.85rem;
+    line-height: 1.25;
+  }
 }
 
 /* Responsive styles for cards row */
