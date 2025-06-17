@@ -191,8 +191,8 @@ p {
 
 .actions {
   display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -205,9 +205,9 @@ p {
   background: #fffbe6;
   border-radius: 1.5rem;
   box-shadow: 0 4px 24px rgba(28,161,78,0.10);
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1.2rem;
   min-width: 200px;
-  min-height: 160px;
+  min-height: 120px;
   text-decoration: none;
   color: #1ca14e;
   font-weight: 600;
@@ -217,8 +217,8 @@ p {
 }
 
 .action-card i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
   color: #ffd700;
 }
 
@@ -1180,9 +1180,9 @@ p {
   background: #fffbe6;
   border-radius: 1.5rem;
   box-shadow: 0 4px 24px rgba(28,161,78,0.10);
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1.2rem;
   min-width: 200px;
-  min-height: 160px;
+  min-height: 120px;
   text-decoration: none;
   color: #1ca14e;
   font-weight: 600;
@@ -1192,8 +1192,8 @@ p {
 }
 
 .action-card i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
   color: #ffd700;
 }
 
@@ -1883,4 +1883,40 @@ p {
 
 .expandable-card h3 i {
   color: #1ca14e;
+}
+
+.full-width-action {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.full-width-action .action-card {
+  width: 100%;
+  max-width: calc(100% - 4rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-button {
+  background-color: #1ca14e !important;
+  color: white !important;
+  border-color: #0b8a3e !important;
+  box-shadow: 0 4px 15px rgba(28, 161, 78, 0.3) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.success-button i {
+  color: white !important;
+  margin-bottom: 0 !important;
+}
+
+.success-button:hover {
+  transform: translateY(-5px) !important;
+  background-color: #0b8a3e !important;
+  box-shadow: 0 6px 20px rgba(28, 161, 78, 0.5) !important;
 }
