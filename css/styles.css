@@ -1,3 +1,10 @@
+/* Make the header logo bigger and responsive */
+.logo-img {
+  height: 120px;
+  width: auto;
+  max-width: 240px;
+  display: block;
+}
 /* Reset and base styles */
 body {
   margin: 0;
