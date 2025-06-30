@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cabyetu - Your Reliable Ride Partner</title>
+  <title>Cabyetu | Your Reliable Ride Partner</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,17 +12,32 @@
   <!-- Header (Standard Template Section) -->
   <header>
     <a href="index.html"><img src="images/image.png" alt="Cabyetu Logo" /></a>
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    
+    <div class="header-controls">
+      <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact Us</a>
     </nav>
+
+    <!-- InstanceBeginEditable name="socialLinks" -->
+    <div class="template-header-bar">
+      <img src="images/favicon.png" alt="Cabyetu Favicon" class="cabyetu-logo">
+      <span class="cabyetu-name">cabyetu.com</span>
+    </div>
+    <!-- InstanceEndEditable -->
   </header>
 
   <!-- Page-Specific Content Editable Region -->
@@ -128,6 +143,7 @@
       <a href="https://wa.me/254708700000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
+
   <script>
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
@@ -136,83 +152,31 @@
       nav.classList.toggle('open');
       menuToggle.classList.toggle('open');
     });
-      document.addEventListener('DOMContentLoaded', () => {
-      // Y.E.T.U. Values Grid Scroll Functionality
-      const valuesGrid = document.querySelector('.values-grid');
-      const leftBtn = document.querySelector('.scroll-left');
-      const rightBtn = document.querySelector('.scroll-right');
+    
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const icon = darkModeToggle.querySelector('i');
+    
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode-enabled');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+    
+    // Toggle dark mode
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode-enabled');
       
-      if (valuesGrid && leftBtn && rightBtn) {
-        // Scroll amount calculation based on item width
-        const scrollAmount = () => {
-          const firstItem = valuesGrid.querySelector('.value-item');
-          return firstItem ? firstItem.offsetWidth + 15 : 240; // Use margin-right + width or default
-        };
-        
-        // Scroll left button
-        leftBtn.addEventListener('click', () => {
-          valuesGrid.scrollBy({
-            left: -scrollAmount(),
-            behavior: 'smooth'
-          });
-        });
-        
-        // Scroll right button
-        rightBtn.addEventListener('click', () => {
-          valuesGrid.scrollBy({
-            left: scrollAmount(),
-            behavior: 'smooth'
-          });
-        });
-        
-        // Scroll position detection to show/hide arrows
-        if (window.IntersectionObserver) {
-          // Create observers for the first and last items
-          const options = {
-            root: valuesGrid,
-            threshold: 1.0
-          };
-          
-          // Detect when first item is fully visible
-          const firstItemObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-              leftBtn.style.opacity = '0.3';
-            } else {
-              leftBtn.style.opacity = '1';
-            }
-          }, options);
-          
-          // Detect when last item is fully visible
-          const lastItemObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-              rightBtn.style.opacity = '0.3';
-            } else {
-              rightBtn.style.opacity = '1';
-            }
-          }, options);
-          
-          // Observe first and last items
-          const items = valuesGrid.querySelectorAll('.value-item');
-          if (items.length > 0) {
-            firstItemObserver.observe(items[0]);
-            lastItemObserver.observe(items[items.length - 1]);
-          }
-        }
+      if (document.body.classList.contains('dark-mode-enabled')) {
+        localStorage.setItem('darkMode', 'enabled');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        localStorage.setItem('darkMode', null);
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
       }
-        // Expandable Cards Functionality
-      const readMoreBtns = document.querySelectorAll('.read-more-btn');
-        readMoreBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const card = btn.closest('.expandable-card');
-          card.classList.toggle('expanded');
-          
-          if (card.classList.contains('expanded')) {
-            btn.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
-          } else {
-            btn.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
-          }
-        });
-      });
     });
   </script>
 </body>

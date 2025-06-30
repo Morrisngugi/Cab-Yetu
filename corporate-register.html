@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cabyetu - Your Reliable Ride Partner</title>
+  <title>Cabyetu | Your Reliable Ride Partner</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,6 +31,13 @@
       <a href="services.html">Services</a>
       <a href="contact.html">Contact Us</a>
     </nav>
+
+    <!-- InstanceBeginEditable name="socialLinks" -->
+    <div class="template-header-bar">
+      <img src="images/favicon.png" alt="Cabyetu Favicon" class="cabyetu-logo">
+      <span class="cabyetu-name">cabyetu.com</span>
+    </div>
+    <!-- InstanceEndEditable -->
   </header>
 
   <!-- Page-Specific Content Editable Region -->
@@ -193,6 +200,7 @@
       <a href="https://wa.me/254708700000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
+
   <script>
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
@@ -226,21 +234,6 @@
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
       }
-    });
-    
-    // Form submission handler - placeholder for future database integration
-    document.getElementById('corporateRegistrationForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formMessage = document.getElementById('formMessage');
-      formMessage.textContent = "Registration submitted successfully! Our team will contact you shortly.";
-      formMessage.className = 'form-message success';
-      
-      // Clear the form
-      e.target.reset();
-      
-      // In a real implementation, you would send this data to a server or database
-      console.log("Form submitted - database integration pending");
     });
   </script>
 </body>

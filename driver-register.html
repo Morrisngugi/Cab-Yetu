@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Driver Registration | Cabyetu</title>
+  <title>Cabyetu | Your Reliable Ride Partner</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,6 +31,13 @@
       <a href="services.html">Services</a>
       <a href="contact.html">Contact Us</a>
     </nav>
+
+    <!-- InstanceBeginEditable name="socialLinks" -->
+    <div class="template-header-bar">
+      <img src="images/favicon.png" alt="Cabyetu Favicon" class="cabyetu-logo">
+      <span class="cabyetu-name">cabyetu.com</span>
+    </div>
+    <!-- InstanceEndEditable -->
   </header>
 
   <!-- Page-Specific Content Editable Region -->
@@ -290,87 +297,6 @@
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
       }
-    });
-    
-    // Show/hide "Other City" field
-    document.getElementById('city').addEventListener('change', function() {
-      const otherCity = document.getElementById('otherCity');
-      const otherCityLabel = document.getElementById('otherCityLabel');
-      
-      if (this.value === 'other') {
-        otherCity.style.display = 'block';
-        otherCityLabel.style.display = 'block';
-        otherCity.required = true;
-      } else {
-        otherCity.style.display = 'none';
-        otherCityLabel.style.display = 'none';
-        otherCity.required = false;
-      }
-    });
-    
-    // Show/hide vehicle details based on ownership
-    const vehicleRadios = document.querySelectorAll('input[name="vehicleOwnership"]');
-    const vehicleDetails = document.getElementById('vehicleDetails');
-    
-    vehicleRadios.forEach(radio => {
-      radio.addEventListener('change', function() {
-        if (this.value === 'own' || this.value === 'rent') {
-          vehicleDetails.style.display = 'block';
-          document.getElementById('vehicleMake').required = true;
-          document.getElementById('vehicleModel').required = true;
-          document.getElementById('vehicleYear').required = true;
-          document.getElementById('licensePlate').required = true;
-        } else {
-          vehicleDetails.style.display = 'none';
-          document.getElementById('vehicleMake').required = false;
-          document.getElementById('vehicleModel').required = false;
-          document.getElementById('vehicleYear').required = false;
-          document.getElementById('licensePlate').required = false;
-        }
-      });
-    });
-    
-    // Accordion functionality
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
-    accordionHeaders.forEach(header => {
-      header.addEventListener('click', function() {
-        this.classList.toggle('active');
-        
-        const icon = this.querySelector('.accordion-icon i');
-        icon.classList.toggle('fa-chevron-down');
-        icon.classList.toggle('fa-chevron-up');
-        
-        const content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      });
-    });
-    
-    // Form submission handler - placeholder for future database integration
-    document.getElementById('driverRegistrationForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formMessage = document.getElementById('formMessage');
-      formMessage.textContent = "Application submitted successfully! We'll contact you shortly with next steps.";
-      formMessage.className = 'form-message success';
-      
-      // Clear the form
-      e.target.reset();
-      
-      // Hide any conditionally shown fields
-      document.getElementById('otherCity').style.display = 'none';
-      document.getElementById('otherCityLabel').style.display = 'none';
-      document.getElementById('vehicleDetails').style.display = 'none';
-      
-      // In a real implementation, you would send this data to a server or database
-      console.log("Driver application submitted - database integration pending");
-      
-      // Scroll to the message
-      formMessage.scrollIntoView({ behavior: 'smooth' });
     });
   </script>
 </body>

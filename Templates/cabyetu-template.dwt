@@ -34,7 +34,7 @@
 
     <!-- TemplateBeginEditable name="socialLinks" -->
     <div class="template-header-bar">
-      <img src="../images/favicon.ico" alt="Cabyetu Favicon" class="cabyetu-logo">
+      <img src="../images/favicon.png" alt="Cabyetu Favicon" class="cabyetu-logo">
       <span class="cabyetu-name">cabyetu.com</span>
     </div>
     <!-- TemplateEndEditable -->
