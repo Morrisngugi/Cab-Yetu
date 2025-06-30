@@ -29,6 +29,25 @@ header img {
   margin-left: auto; /* Push to the right */
 }
 
+/* Cabyetu header bar and logo styles */
+.template-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cabyetu-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffd700;
+  box-shadow: 0 0 2px #ccc;
+  object-fit: cover;
+}
+.cabyetu-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 /* Dark mode toggle */
 .dark-mode-toggle {
   background: none;
