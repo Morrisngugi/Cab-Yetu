@@ -5,6 +5,18 @@
   max-width: 240px;
   display: block;
 }
+
+/* Additional responsive adjustments to prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* Reset and base styles */
 body {
   margin: 0;
@@ -62,38 +74,7 @@ header img {
   font-size: 1.1rem;
 }
 
-/* Dark mode toggle */
-.dark-mode-toggle {
-  background: none;
-  border: none;
-  color: #ffd700;
-  cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-  background-color: rgba(255, 215, 0, 0.1);
-  transform: rotate(15deg);
-}
-
-.dark-mode-toggle:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
-}
-
-body.dark-mode-enabled .dark-mode-toggle {
-  color: #fff;
-}
-
-body.dark-mode-enabled .dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+/* Dark mode toggle removed */
 
 /* Navigation styles */
 nav {
@@ -1655,84 +1636,51 @@ p {
   }
 }
 
-/* Responsive layout improvements */
-@media (max-width: 900px) {
-  .actions {
-    gap: 1rem;
-  }
-  .action-card {
-    min-width: 140px;
-    min-height: 140px;
-    padding: 1.2rem 0.7rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 360px) {
+  /* Extreme small screen improvements */
   header {
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-    padding: 0.8rem 1.5rem; /* Slightly reduce header padding */
+    padding: 0.6rem 1rem;
   }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #ffd700;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    z-index: 1000;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-
-  nav.open {
-    display: flex;
-  }
-
-  .content {
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+  
+  header img {
+    height: 50px; /* Even smaller logo */
   }
   
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
-  /* Optimize card padding on mobile */
-  .card {
-    padding: 1.2rem;
+  .content {
+    padding: 0.8rem;
   }
   
-  /* Improve form layout on mobile */
-  .form-container {
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .actions {
-    flex-direction: column;
-    gap: 1.2rem;
-  }
   .action-card {
-    width: 100%;
-    min-width: unset;
-    min-height: 100px;
-    padding: 1rem 0.5rem;
+    min-height: 80px;
+    padding: 0.8rem 0.5rem;
+  }
+  
+  .action-card i {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .app-card {
+    min-width: 250px;
+    padding: 1rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.6rem;
   }
 }
 
@@ -1742,123 +1690,7 @@ p {
   outline-offset: 2px;
 }
 
-/* Optional Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  body.dark-mode-enabled {
-    background: linear-gradient(135deg, #5e5100 0%, #222 60%, #0a4b1e 100%);
-    color: #f0f0f0;
-  }
-  
-  body.dark-mode-enabled header {
-    background-color: #1f1f1f;
-  }
-  
-  body.dark-mode-enabled nav a {
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled .action-card {
-    background: #333;
-    border-color: #5e5100;
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled .card {
-    background-color: #333;
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled h1 {
-    color: #4eca7a;
-  }
-  
-  body.dark-mode-enabled h2 {
-    color: #a1e6b8;
-  }
-  
-  body.dark-mode-enabled .mission-card {
-    background-color: #5d4e1a;
-    border-color: #ffd700;
-  }
-  
-  body.dark-mode-enabled .vision-card {
-    background-color: #0a3818;
-    border-color: #1ca14e;
-  }
-  
-  body.dark-mode-enabled .values-section {
-    background-color: #333;
-  }
-  
-  body.dark-mode-enabled .value-card {
-    background-color: #444;
-  }
-  
-  body.dark-mode-enabled .value-card h4 {
-    color: #4eca7a;
-  }
-  
-  body.dark-mode-enabled .value-card p {
-    color: #ddd;
-  }
-  
-  body.dark-mode-enabled .contact-intro {
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled .info-card,
-  body.dark-mode-enabled .contact-form {
-    background-color: #333;
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled .info-card a {
-    color: #66d88e;
-  }
-  
-  body.dark-mode-enabled .form-group label {
-    color: #ccc;
-  }
-  
-  body.dark-mode-enabled .form-group input,
-  body.dark-mode-enabled .form-group select,
-  body.dark-mode-enabled .form-group textarea {
-    background-color: #444;
-    border-color: #555;
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled .cta-section {
-    background-color: #222;
-  }
-  
-  body.dark-mode-enabled .services-intro {
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled .service-card,
-  body.dark-mode-enabled .app-features,
-  body.dark-mode-enabled .testimonial-card {
-    background-color: #333;
-    color: #e0e0e0;
-  }
-  
-  body.dark-mode-enabled .feature-item {
-    background-color: #444;
-  }
-  
-  body.dark-mode-enabled .feature-list li:before {
-    color: #ffd700;
-  }
-  
-  body.dark-mode-enabled .testimonial-author span {
-    color: #bbb;
-  }
-  
-  body.dark-mode-enabled .cta-container {
-    background-color: #222;
-  }
-}
+/* All dark mode support has been removed */
 
 /* Animation utilities */
 .fade-in {
@@ -1890,6 +1722,28 @@ p {
   }
   100% {
     box-shadow: 0 5px 15px rgba(28, 161, 78, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Responsive image improvements */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive table improvements */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  table {
+    display: table;
   }
 }
 
