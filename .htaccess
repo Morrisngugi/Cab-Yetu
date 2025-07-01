@@ -1,0 +1,90 @@
+# .htaccess file for Dreamweaver-created static HTML website
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the base for rewrites
+RewriteBase /
+
+# Force HTTPS (uncomment if you have SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Choose one of the following www handling options:
+# Option 1: Redirect www to non-www (uncomment if preferred)
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Option 2: Redirect non-www to www (uncomment if preferred)
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Set default index files
+DirectoryIndex index.html index.htm
+
+# Prevent directory listing
+Options -Indexes
+
+# Prevent access to sensitive files including Dreamweaver template files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|git|svn|dwt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Enable gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
+# Browser caching for static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/webm "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/x-javascript "access plus 1 week"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# MIME types
+AddType text/css .css
+AddType text/html .html .htm
+AddType image/gif .gif
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType application/javascript .js
+
+# Error documents (uncomment and create these pages if needed)
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html
+
+# Allow access to all HTML files
+<FilesMatch "\.html$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Add any custom redirects below this line
+# Example: Redirect 301 /old-page.html /new-page.html
