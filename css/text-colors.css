@@ -1,0 +1,102 @@
+/* Text color overrides for dark backgrounds */
+:root {
+  --gold-color: #D4AF37; /* Gold color - matching the main stylesheet */
+}
+
+/* General text color for dark backgrounds */
+.dark-bg {
+    color: white !important;
+}
+
+/* Headers on dark backgrounds */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--gold-color);
+}
+
+/* Specific page headings in gold */
+.about-section h1,
+.about-section h2,
+.content h1 {
+    color: var(--gold-color) !important;
+}
+
+/* Footer text (which typically has dark background) */
+footer, footer a, footer p {
+    color: white !important;
+}
+
+/* Navigation elements */
+header nav, header nav a {
+    color: white;
+}
+
+/* Any elements with dark backgrounds */
+[class*="dark-bg"], [class*="black-bg"], [class*="bg-dark"], [class*="bg-black"] {
+    color: white !important;
+}
+
+/* Override for specific elements with dark backgrounds */
+.footer, 
+.header,
+.dark-section,
+.black-section {
+    color: white;
+}
+
+/* Links in dark areas */
+.dark-bg a, 
+.black-bg a, 
+.bg-dark a, 
+.bg-black a,
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Ensure all text on white backgrounds is dark/black for readability */
+.box, 
+.card, 
+.info-card, 
+.contact-form, 
+.service-card, 
+.app-card,
+.value-item,
+.box p, 
+.card p, 
+.info-card p, 
+.contact-form p,
+.service-card p,
+.app-card p,
+.testimonial-card,
+.testimonial-content,
+[style*="background: white"],
+[style*="background-color: white"],
+[style*="background: #fff"],
+[style*="background-color: #fff"],
+[class*="bg-white"] {
+    color: #333 !important;
+}
+
+/* Text in specific white background elements */
+.box p, 
+.card p, 
+.info-card p, 
+.contact-form p,
+.service-card p,
+.app-card p,
+.white-bg p,
+.bg-white p,
+.feature-list li,
+.box h3, 
+.card h3, 
+.info-card h3, 
+.service-card h3,
+.app-card h3,
+.testimonial-author,
+.testimonial-card p,
+.form-group label,
+.form-group input,
+.form-group select,
+.form-group textarea {
+    color: #333 !important;
+}

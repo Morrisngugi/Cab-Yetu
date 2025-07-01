@@ -1,0 +1,73 @@
+/* Mobile Navigation Styles */
+
+/* Hamburger menu button */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile navigation styles */
+@media (max-width: 768px) {
+    /* Show hamburger menu */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Style for menu icon when active */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+    
+    /* Hide desktop navigation by default on mobile */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(31, 31, 31, 0.95);
+        flex-direction: column;
+        padding: 80px 20px 30px;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+    
+    /* Show navigation when active */
+    nav.active {
+        right: 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Style navigation links */
+    nav a {
+        margin: 15px 0;
+        font-size: 1.2rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 10px;
+        width: 100%;
+        color: white;
+    }
+}
