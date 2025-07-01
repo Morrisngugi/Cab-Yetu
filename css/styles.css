@@ -27,7 +27,7 @@ html, body {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #111;
+  background: #1a1a1a; /* Slightly lighter than pure black */
   color: white;
   min-height: 100vh;
   line-height: 1.6;
@@ -35,22 +35,30 @@ body {
 
 /* Header styles */
 header {
-  background-color: #1f1f1f;
-  padding: 1rem 2rem;
+  background-color: #141414; /* Darker than body for contrast */
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  min-height: 120px;
 }
 
 header img {
-  height: 100px;
+  height: 110px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Responsive logo sizing */
 @media (max-width: 768px) {
+  header {
+    min-height: 80px;
+    padding: 0.3rem 1.5rem;
+  }
+  
   header img {
-    height: 60px; /* Smaller on mobile */
+    height: 70px; /* Slightly larger on mobile than before */
   }
 }
 
@@ -528,10 +536,11 @@ p {
 
 /* Footer styles */
 .footer {
-  background-color: #222;
+  background-color: #141414; /* Match header color for consistency */
   color: white;
   text-align: center;
   padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator */
 }
 
 .social-links {
