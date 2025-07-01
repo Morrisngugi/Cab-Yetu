@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cabyetu | Your Reliable Ride Partner</title>
@@ -14,12 +15,10 @@
   <!-- Header (Standard Template Section) -->
   <header>
     <a href="../index.html"><img src="../images/final_logo1.jpg" alt="Cabyetu Logo" /></a>
-    
     <div class="header-controls">
       <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
       </button>
-      
       <button class="menu-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -33,7 +32,6 @@
       <a href="../services.html">Services</a>
       <a href="../contact.html">Contact Us</a>
     </nav>
-
     
   </header>
 
