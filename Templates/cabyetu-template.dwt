@@ -58,37 +58,50 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('header nav');
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      menuToggle.classList.toggle('open');
-    });
-    
-    // Dark mode toggle
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const icon = darkModeToggle.querySelector('i');
-    
-    // Check for saved dark mode preference
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark-mode-enabled');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    }
-    
-    // Toggle dark mode
-    darkModeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode-enabled');
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('header nav');
       
-      if (document.body.classList.contains('dark-mode-enabled')) {
-        localStorage.setItem('darkMode', 'enabled');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      } else {
-        localStorage.setItem('darkMode', null);
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
+      
+      if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+          nav.classList.toggle('open');
+          menuToggle.classList.toggle('open');
+        });
+      }
+      
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      
+      if (darkModeToggle) {
+        const icon = darkModeToggle.querySelector('i');
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled' && icon) {
+          document.body.classList.add('dark-mode-enabled');
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode-enabled');
+          
+          const updatedIcon = darkModeToggle.querySelector('i');
+          if (!updatedIcon) return;
+          
+          if (document.body.classList.contains('dark-mode-enabled')) {
+            localStorage.setItem('darkMode', 'enabled');
+            updatedIcon.classList.remove('fa-moon');
+            updatedIcon.classList.add('fa-sun');
+          } else {
+            localStorage.setItem('darkMode', null);
+            updatedIcon.classList.remove('fa-sun');
+            updatedIcon.classList.add('fa-moon');
+          }
+        });
       }
     });
   </script>

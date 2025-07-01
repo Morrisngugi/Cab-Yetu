@@ -29,6 +29,13 @@ header img {
   height: 100px;
 }
 
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  header img {
+    height: 60px; /* Smaller on mobile */
+  }
+}
+
 .header-controls {
   display: flex;
   align-items: center;
@@ -1743,7 +1750,7 @@ p {
   }
   
   body.dark-mode-enabled header {
-    background-color: #5e5100;
+    background-color: #1f1f1f;
   }
   
   body.dark-mode-enabled nav a {
